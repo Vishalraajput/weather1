@@ -16,6 +16,9 @@ body {
   text-align: center;
   width: 480px;          /* Increased from 320px */
   transition: box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .container:hover {
   box-shadow: 0 12px 40px rgba(0,0,0,0.22);
@@ -36,7 +39,63 @@ input:focus {
   box-shadow: 0 0 8px #b2ebf2;
   outline: none;
 }
-button {
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.8rem;
+  color: #2e8eff;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+
+/* From Uiverse.io by reglobby */ 
+.get-weather-btn-inner {
+  width: 131px;
+  height: 51px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background: linear-gradient(
+    to bottom right,
+    #2e8eff 0%,
+    rgba(46, 142, 255, 0) 30%
+  );
+  background-color: rgba(46, 142, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.get-weather-btn-inner:hover,
+.get-weather-btn-inner:focus {
+  background-color: rgba(46, 142, 255, 0.7);
+  box-shadow: 0 0 10px rgba(46, 142, 255, 0.5);
+  outline: none;
+}
+
+.get-weather-btn-inner {
+  width: 127px;
+  height: 47px;
+  border-radius: 13px;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 1.2rem; /* Space below button */
+}
+
+.get-weather-btn-inner svg {
+  width: 27px;
+  height: 27px;
+  fill: #fff;
+}
+
+
+
+/* .get-weather-btn-inner {
   background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%);
   color: white;
   border: none;
@@ -48,10 +107,12 @@ button {
   box-shadow: 0 2px 8px rgba(0,119,182,0.15);
   transition: background 0.3s, transform 0.2s;
 }
-button:hover {
+  .get-weather-btn-inner:hover {
   background: linear-gradient(90deg, #00b4d8 0%, #0077b6 100%);
   transform: translateY(-2px) scale(1.05);
 }
+  */
+
 
 .result {
   margin-top: 1.5rem;
