@@ -26,3 +26,27 @@ async function getWeather() {
     document.getElementById("result").innerHTML = `<p>Error fetching weather data.</p>`;
   }
 }
+
+// Theme switch functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const themeCheckbox = document.querySelector('.theme-switch__checkbox');
+  const body = document.body;
+
+  // Always start in light mode
+  body.classList.remove('dark-mode');
+  if (themeCheckbox) themeCheckbox.checked = false;
+  localStorage.setItem('theme', 'light');
+
+  // Listen for toggle
+  if (themeCheckbox) {
+    themeCheckbox.addEventListener('change', function() {
+      if (themeCheckbox.checked) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  }
+});
